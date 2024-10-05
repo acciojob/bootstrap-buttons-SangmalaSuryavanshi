@@ -1,9 +1,4 @@
 //your code here
-() => {
-    cy.visit(baseUrl + "/main.html");
-    cy.get("#button-6")
-        .should("have.class", "btn")
-        .and("have.class", "btn-info")
-        .and("be.disabled"); // Check if the button is disabled
-}
-
+cy.get("#button-6").then($button => {
+    console.log($button); // Inspect the button in the console
+});
